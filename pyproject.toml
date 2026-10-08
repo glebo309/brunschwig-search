@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brunschwig-search"
+version = "0.1.0"
+description = "Search and rank public Chemie Brunschwig catalogue offers"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/glebo309/brunschwig-search"
+Issues = "https://github.com/glebo309/brunschwig-search/issues"
+
+[project.scripts]
+brunschwig = "brunschwig.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
